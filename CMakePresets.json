@@ -29,7 +29,8 @@
       "inherits": "base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_CXX_FLAGS_RELEASE": "-O2 -march=native -DNDEBUG"
+        "CMAKE_CXX_FLAGS_RELEASE": "-O2 -march=native -DNDEBUG",
+        "KV_BENCH": "ON"
       }
     }
   ],
