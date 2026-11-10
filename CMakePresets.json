@@ -32,12 +32,23 @@
         "CMAKE_CXX_FLAGS_RELEASE": "-O2 -march=native -DNDEBUG",
         "KV_BENCH": "ON"
       }
+    },
+    {
+      "name": "fuzz",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS_DEBUG": "-O1 -g",
+        "KV_SANITIZE": "address,undefined,fuzzer-no-link",
+        "KV_FUZZ": "ON"
+      }
     }
   ],
   "buildPresets": [
     { "name": "debug", "configurePreset": "debug" },
     { "name": "tsan", "configurePreset": "tsan" },
-    { "name": "release", "configurePreset": "release" }
+    { "name": "release", "configurePreset": "release" },
+    { "name": "fuzz", "configurePreset": "fuzz" }
   ],
   "testPresets": [
     {
